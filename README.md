@@ -21,7 +21,7 @@ X-Foxo-Action: create-patient
 ```
 ##### Body
 JSON payload
-```json
+```javascript
 {
   // everything is optional exept first / last name fields
   "Title": "Ms",
