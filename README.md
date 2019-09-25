@@ -18,48 +18,58 @@ This will create a patient in Foxo and attach the endpoint owner as the primary 
 ##### Headers
 ```
 X-Foxo-Action: create-patient
-X-Foxo-Team_uid: b43e9c91-4b19-493b-9548-594266efacf0 // optional team_uid to send the patient to after created
 ```
 ##### Body
 JSON payload
 ```json
 {
-   "Title": "Ms",
-   "GivenName": "Jane",
-   "FamilyName": "Doe",
-   "OtherNames": null,
-   "DateOfBirth": "1980-01-01T00:00:00.0000000",
-   "Sex": "Female",
-   "KarismaIdentifierType": "Internal",
-   "WorkSiteIdentifierType": "Logan UR",
-   "Identifiers": [
-       {
-           "Type": "Logan UR",
-           "Value": "1234"
-       },
-       {
-           "Type": "Redlands UR",
-           "Value": "4321"
-       },
-       {
-           "Type": "Internal",
-           "Value": "5678"
-       },
-       {
-           "TypeN": "Name",
-           "ValueN": "Value"
-       }
-   ],
-   "HomePhone": "0812344321",
-   "WorkPhone": null,
-   "MobilePhone": null,
-   "FaxNumber": null,
-   "EmailAddress": null,
-   "Location": "123 fake street",
-   "Suburb": "Osborne Park",
-   "PostCode": "6017",
-   "State": "WA",
-   "Country": "Australia"
+  // everything is optional exept first / last name fields
+  "Title": "Ms",
+  "GivenName": "Jane",
+  "FamilyName": "Doe",
+  "OtherNames": null,
+  "DateOfBirth": "1980-01-01T00:00:00.0000000",
+  "Sex": "Female",
+  "HomePhone": "0812344321",
+  "WorkPhone": null,
+  "MobilePhone": null,
+  "EmailAddress": null,
+  "Location": "123 fake street",
+  "Suburb": "Osborne Park",
+  "PostCode": "6017",
+  "State": "WA",
+  "Country": "Australia",
+
+  // Idenifier fields are wildcards will use last defined, and can be omitted
+  "[a-z0-9]*Identifier": "1234",
+
+  // optional will over write any other identifer fields set.
+  "KarismaIdentifierType": "Internal",
+  "WorkSiteIdentifierType": "Logan UR",
+  "Identifiers": [
+      {
+          "Type": "Logan UR",
+          "Value": "1234"
+      },
+      {
+          "Type": "Redlands UR",
+          "Value": "4321"
+      },
+      {
+          "Type": "Internal",
+          "Value": "5678"
+      },
+      {
+          "TypeN": "Name",
+          "ValueN": "Value"
+      }
+  ],
+
+  // only use if the card needs to be sent to a team after created
+  "sendToTeam": {
+    "team_uid":"b43e9c91-4b19-493b-9548-594266efacf0",
+    "note": "Some notes to pass to the team"
+  }
 }
 ```
 ##### 200 Response
