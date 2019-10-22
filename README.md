@@ -75,13 +75,13 @@ JSON payload
 ##### 200 Response
 ```json
 {
-  "message": "Success, Patient will now be available in Apello."
+  "message": "Success, Patient will now be available in Foxo."
 }
 ```
 ##### 400 Response
 ```json
 {
-    "message": "Apello API Failed to parse request. Please check API endpoint and data before trying again."
+    "message": "Foxo API Failed to parse request. Please check API endpoint and data before trying again."
 }
 ```
 ### List Available Teams
