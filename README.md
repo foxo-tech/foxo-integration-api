@@ -3,7 +3,7 @@ Docs on using the Foxo integration API
 
 API Endpoints can be created in your Foxo account under Profile > Settings > Integrations. Endpoints created are unique to your account and carry authentication thus should be shared with care.
 
-Testing the API can be done by creating an account on out staging server [staging.appelo.app](staging.appelo.app).
+Testing the API can be done by creating an account on out staging server [app-staging.foxo.com](app-staging.foxo.com).
 
 ## Basics
 Since there is a single endpoint actions are determined by method and `X-Foxo-Action`.
