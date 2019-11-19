@@ -3,7 +3,7 @@ Docs on using the Foxo integration API
 
 API Endpoints can be created in your Foxo account under Profile > Settings > Integrations. Endpoints created are unique to your account and carry authentication thus should be shared with care.
 
-Testing the API can be done by creating an account on out staging server [https://app-staging.foxo.com](app-staging.foxo.com).
+Testing the API can be done by creating an account on out staging server [app-staging.foxo.com](https://app-staging.foxo.com){:target="_blank"}.
 
 ## Basics
 Since there is a single endpoint actions are determined by method and `X-Foxo-Action`.
@@ -23,7 +23,7 @@ X-Foxo-Action: create-patient
 JSON payload
 ```javascript
 {
-  // everything is optional exept first / last name fields
+  // everything is optional except GivenName & FamilyName fields or FirstName & LastName fields respectively
   "Title": "Ms",
   "GivenName": "Jane",
   "FamilyName": "Doe",
