@@ -28,6 +28,7 @@ JSON payload
 ```javascript
 {
   // everything is optional except GivenName & FamilyName fields or FirstName & LastName fields respectively
+  // these fields are not case sensitive and syntax style converted IE GivenName = givenname = given_name
   "Title": "Ms",
   "GivenName": "Jane",
   "FamilyName": "Doe",
