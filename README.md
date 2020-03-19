@@ -3,7 +3,7 @@ Docs on using the Foxo integration API
 
 API Endpoints can be created in your Foxo account under Profile > Settings > Integrations. Endpoints created are unique to your account and carry authentication thus should be shared with care.
 
-Testing the API can be done by creating an account on out staging server [app-staging.foxo.com](https://app-staging.foxo.com).
+Testing the API can be done by creating an account on our staging server [app-staging.foxo.com](https://app-staging.foxo.com).
 
 ## Postman Demo
 Covers the core patient workflows.
