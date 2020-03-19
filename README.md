@@ -5,6 +5,10 @@ API Endpoints can be created in your Foxo account under Profile > Settings > Int
 
 Testing the API can be done by creating an account on out staging server [app-staging.foxo.com](https://app-staging.foxo.com).
 
+## Postman Demo
+Covers the core patient workflows.
+https://www.getpostman.com/collections/cecabfb648419ce2055b
+
 ## Basics
 Since there is a single endpoint actions are determined by method and `X-Foxo-Action`.
 
@@ -39,6 +43,7 @@ JSON payload
   "PostCode": "6017",
   "State": "WA",
   "Country": "Australia",
+  "ClinicalInfo": "Clinical info to be attached to patient"
 
   // Idenifier fields are wildcards will use last defined, and can be omitted
   "[a-z0-9]*Identifier": "1234",
@@ -68,7 +73,8 @@ JSON payload
   // only use if the card needs to be sent to a team after created
   "sendToTeam": {
     "team_uid":"b43e9c91-4b19-493b-9548-594266efacf0",
-    "note": "Some notes to pass to the team"
+    "case_subject": "Subject for case"
+    "case_message": "first message to be sent in the case thread"
   }
 }
 ```
