@@ -116,3 +116,27 @@ X-Foxo-Action: list-teams
     "message": "Unable to find teams available to this user."
 }
 ```
+
+### Upload and attach media
+Add media to cases, patient cards or chat groups.
+##### Method: POST
+##### Headers
+```
+X-Foxo-Action: upload-media
+```
+##### Body
+form-data
+```
+case_key=$case_key(optional)
+patient_uid=$patient_uid(optional)
+media=(file or files data)
+```
+##### 200 Response
+```json
+{
+  "message":"Upload Success",
+  "data": {
+    "message":"Media added."
+  }
+}
+```
