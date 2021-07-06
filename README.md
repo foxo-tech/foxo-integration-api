@@ -71,6 +71,66 @@ JSON payload
       }
   ],
 
+  // optional
+  "medicalProperties": {
+      "allergies": [
+          {
+              "name":"ACE Inhibitors",
+              "manifestation":"Rash (Moderate)"
+          },
+          {
+              "name":"Bee stings",
+              "manifestation":"Anaphylaxis (Severe)"
+          }
+      ],
+      "history": [
+          {
+              "name":"Diabetes Mellitus, Type 2",
+              "status":"active",
+              "date":"2021-05-20"
+          },
+          {
+              "name":"Pregnant",
+              "status":"inactive",
+              "date":"2021-01-01"
+          },
+          {
+              "name":"Pregnant",
+              "status":"inactive",
+              "date":"2020-07-01"
+          },
+          {
+              "name":"Plantar wart removal",
+              "status":"complete",
+              "date":"2020-09-02"
+          },
+          {
+              "name":"Check up",
+              "status":"complete",
+              "date":"2020-07-01"
+          }
+      ],
+      "medications":[
+          {
+              "name":"Trandate 200mg Tablet",
+              "dosage":"2 At midday without regard to meals prn (100) 5 repeats"
+          },
+          {
+              "name":"Prantal 2% Powder",
+              "dosage":"2 In the morning (1x120g)"
+          },
+          {
+              "name":"Pentasa 500mg Tablet, modified release",
+              "dosage":"1 In the morning before meals (200) 5 repeats"
+          }
+      ]
+  },
+
+  // optional
+  "clinicalProperties": {
+      "scan_type": "XRay"
+  }
+
   // only use if the card needs to be sent to one or multiple teams after created
   "sendToTeam": {
     // send to one team only, not needed if `team_uids` is provided
