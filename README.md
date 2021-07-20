@@ -138,7 +138,9 @@ JSON payload
     // send to multiple teams, not needed if `team_uid` is provided
     "team_uids": ["b43e9c91-4b19-493b-9548-594266efacf0", "f669a821-303b-4f8f-a32f-ac6ed75dd566"]
     "case_subject": "Subject for case"
-    "case_message": "first message to be sent in the case thread"
+    "case_message": "first message to be sent in the case thread",
+    // case webhooks will be triggered on case state change events. it will post a json object to the endpoint with 3 values state, case_key, case_webhook
+    "case_webhook": "https://dothis.com/webhook?id=sample123"
   }
 }
 ```
@@ -148,9 +150,9 @@ JSON payload
   "message": "Success, Patient will now be available in Foxo.",
   "patient_uid": "fd0613f3-46cf-4e78-80a5-e67c1d0ab024",
   // if `team_uid` was provided in the request
-  "case_Key": "b43e9c91-4b19-493b-9548-594266efacf0:32",
+  "case_key": "b43e9c91-4b19-493b-9548-594266efacf0:32",
   // if `team_uids` was provided in the request
-  "case_Keys": [
+  "case_keys": [
     "b43e9c91-4b19-493b-9548-594266efacf0:32",
     "f669a821-303b-4f8f-a32f-ac6ed75dd566:7"
   ]
