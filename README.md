@@ -139,6 +139,8 @@ JSON payload
     "team_uids": ["b43e9c91-4b19-493b-9548-594266efacf0", "f669a821-303b-4f8f-a32f-ac6ed75dd566"]
     "case_subject": "Subject for case"
     "case_message": "first message to be sent in the case thread",
+    // optional: Can be URGENT, HIGH or NORMAL (default)
+    "case_priority": "URGENT",
     // case webhooks will be triggered on case state change events. it will post a json object to the endpoint with 3 values state, case_key, case_webhook
     "case_webhook": "https://dothis.com/webhook?id=sample123"
   }
