@@ -215,3 +215,23 @@ media=(file or files data)
   }
 }
 ```
+
+### Case webhook payload
+In case a `case_webhook` is provided when creating a patient with a case, the
+following HTTP body payload will be send to that webhook URL using a `POST` request:
+
+##### Method: POST
+##### Body
+`application/json`
+
+```json
+{
+  "state": "PENDING_CLOSED",
+  "case_key": "b43e9c91-4b19-493b-9548-594266efacf0:32",
+  "case_webhook": "https://dothis.com/webhook?id=sample123"
+}
+```
+
+The `state` can either be `OPEN` (case was re-opened by either the case claimer
+or case creator), `PENDING_CLOSED` (case was closed by the case claimer) or
+`CLOSED` (case was closed by the case creator)
